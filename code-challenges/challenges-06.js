@@ -33,17 +33,20 @@ const findMax = (arr)=>{
 // Output: 81
 //  
 
+console.log("hi"*0)
 const sumNums = (arr)=>{
     let sum=0;
     // write your code here
     let numArray=[];
-    let num=10;
-    for(let i=1;i<arr.length;i++){
-     if (num+arr[i]!== NaN && num+arr[i]!==undefined){
+    let num=0;
+    for(let i=0;i<arr.length;i++){
+     if (num*arr[i]===0 && (arr[i] !==`${arr[i]}`)){
         numArray.push(arr[i]);
+        console.log(arr[i]);
      }
        }
-       for(let y=1;y<numArray.length;y++){
+       
+       for(let y=0;y<numArray.length;y++){
         sum=sum+numArray[y];
        }
     return sum;
