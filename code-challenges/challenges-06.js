@@ -14,6 +14,10 @@
 const findMax = (arr)=>{
     let max;
     // write your code here
+   max=arr[0];
+   for(let i=1;i<arr.length;i++){
+    if(arr[i]>max){max=arr[i];}
+   }
     return max;
 }
 // -------------------------------------------------------------------------------------------------------
@@ -30,8 +34,18 @@ const findMax = (arr)=>{
 //  
 
 const sumNums = (arr)=>{
-    let sum;
+    let sum=0;
     // write your code here
+    let numArray=[];
+    let num=10;
+    for(let i=1;i<arr.length;i++){
+     if (num+arr[i]!== NaN && num+arr[i]!==undefined){
+        numArray.push(arr[i]);
+     }
+       }
+       for(let y=1;y<numArray.length;y++){
+        sum=sum+numArray[y];
+       }
     return sum;
 }
 // -------------------------------------------------------------------------------------------------------
