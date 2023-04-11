@@ -24,7 +24,7 @@ const objLat = (obj) => {
     // write your code here
     obj.firstName=obj.firstName.charAt(0).toUpperCase()+ obj.firstName.slice(1);
     obj.lastName=obj.lastName.charAt(0).toUpperCase()+ obj.lastName.slice(1);
-    console.log(`my name is ${obj.firstName} ${obj.lastName} I am ${obj.age} YO, and I love ${obj.hobby}.`)
+    return (`my name is ${obj.firstName} ${obj.lastName} I am ${obj.age} YO, and I love ${obj.hobby}.`)
 };
 // -------------------------------------------------------------------------------------------------------
 
@@ -88,18 +88,37 @@ const objLat = (obj) => {
 //  2- If one of the names is null don`t add it to the full name
 
 const cvFormatter = (arr) => {
+    // write your code here
     let finalArr=[];
 
     for(let i=0; i<arr.length;i++){
-      if(arr.firstName != null && arr.lastName != null && arr.yearsOfExperience >=1){
-             let obj={fullName:`${arr[0].firstName} ${arr[0].lastName}`,
-               tech: `${arr[0].tech}`}
+      if( arr.yearsOfExperience >1){
+
+        if(ar[i].firstName != null && arr[i].lastName != null){
+             let obj={fullName:arr[i].firstName+" "+ arr[i].lastName,
+               tech:arr[i].tech}
+               finalArr.push(obj)
             }
-           finalArr.push(obj)
-      }
+
+               
+               
+               else if (arr[i].lastName == null ){
+                let obj={fullName:arr[i].firstName,
+               tech:arr[i].tech}
+               finalArr.push(obj)
+            }
+            else if (arr[i].firstName == null ){
+                let obj={fullName:arr[i].lastName,
+               tech:arr[i].tech}
+               finalArr.push(obj)
+            }
+            
+            }
+          }
+      
     
-    // write your code here
-    return finalArr;
+    
+    return(finalArr);
 };
 // -------------------------------------------------------------------------------------------------------
 
