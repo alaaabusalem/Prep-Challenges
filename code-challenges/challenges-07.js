@@ -92,9 +92,9 @@ const cvFormatter = (arr) => {
     let finalArr=[];
 
     for(let i=0; i<arr.length;i++){
-      if( arr.yearsOfExperience >1){
+      if( arr[i].yearsOfExperience >1){
 
-        if(ar[i].firstName != null && arr[i].lastName != null){
+        if(arr[i].firstName != null && arr[i].lastName != null){
              let obj={fullName:arr[i].firstName+" "+ arr[i].lastName,
                tech:arr[i].tech}
                finalArr.push(obj)
