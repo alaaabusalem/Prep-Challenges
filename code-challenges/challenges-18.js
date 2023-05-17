@@ -18,11 +18,15 @@ const wordLength = (str) => {
     // write your code here
    let strArray=str.split(" ");
    let arraylength=0;
-   if(strArray.length%2 !=0){
+   let middle=0;
+   if(strArray.length%2 ===0){
     arraylength=strArray.length+1;
+    middle=(arraylength/2)-1;
+   
+
    }
    else{arraylength=strArray.length;}
-    let middle=(arraylength/2)-1;
+    middle=Math.round((arraylength/2))-1;
      let wordlength=0;
      let mid=strArray[middle].split("");
      for (let y = 0; y < mid.length; y++) {
